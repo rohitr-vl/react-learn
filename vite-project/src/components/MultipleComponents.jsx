@@ -1,21 +1,17 @@
-import viteLogo from '/vite.svg'
-import reactLogo from './../assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import reactLogo from './../assets/react.svg'
 
-export const ViteLogo = () => {
- return <img src={viteLogo} alt="Vite Alt" />;
-};
-export const ReactLogo = () => {
- return <img src={reactLogo} alt="ReactJS Alt" />;
+export const FrameworkLogo = (props) => {
+  return <img src={props.imgPath} alt={props.altText} />;
 };
 
-const Frameworks = () => {
-    return (
-        <div>
-            <p>Best Framework combo:</p>
-            <ViteLogo />
-            <ReactLogo />
-        </div>
-    );
+const Frameworks = (props) => {
+  return (
+    <div>
+      <p>Best JS {props.type}:</p>
+      <FrameworkLogo imgPath={props.imgPath} altText={props.altText} />
+    </div>
+  );
 };
 
 export default Frameworks;

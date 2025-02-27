@@ -14,7 +14,8 @@ class App extends Component {
     // local state is always a json object
     this.state = {
       filename: 'App.jsx',
-      lang: {one:'Vite', two:'React'}
+      lang: { one: 'Vite', two: 'React' },
+      type: {one:'tool', two:'framework'}
     }
   }
   render() {
@@ -53,7 +54,8 @@ class App extends Component {
           <p><ButtonGallery /></p>
           <Gallerys />
         </div>
-        <div><Frameworks /></div>
+        <div><Frameworks imgPath={reactLogo} altText={this.state.lang.two} type={this.state.lang.two} /></div>
+        <div><Frameworks imgPath={viteLogo} altText={this.state.lang.one} type={this.state.lang.one} /></div>
       </>
     )
   }
