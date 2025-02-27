@@ -29,15 +29,24 @@ class App extends Component {
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
         </div>
-        <h1>{this.state.lang.one} + {this.state.lang.two}</h1>
+        <h1>
+          {this.state.lang.one} + {this.state.lang.two}
+        </h1>
         <div className="card">
-        {/* Below is an example of Shallow merge, 
+          {/* Below is an example of Shallow merge, 
         we need to make sure that json object structure remains same so that values are updated & rendered properly
         Also it happens asynchronously, that is why at runtime, in console, old value is printed */}
-        <button onClick={() => {
-          this.setState({filename: 'Main.jsx',lang: {one:'ViteJS', two:'ReactJS'}});
-          console.log(this.state);
-        }}>Change Filename</button>
+          <button
+            onClick={() => {
+              this.setState({
+                filename: "Main.jsx",
+                lang: { one: "ViteJS", two: "ReactJS" },
+              });
+              console.log(this.state);
+            }}
+          >
+            Change Filename
+          </button>
           <p>
             Edit <code>src/{this.state.filename}</code> and save to test HMR
           </p>
@@ -47,17 +56,29 @@ class App extends Component {
         </p>
         <ButtonClickMe />
         <div>
-            <Gallery />
-            <Profile />
+          <Gallery />
+          <Profile />
         </div>
         <div>
-          <p><ButtonGallery /></p>
+          <p>
+            <ButtonGallery />
+          </p>
           <Gallerys />
         </div>
-        <div><Frameworks imgPath={reactLogo} altText={this.state.lang.two} type={this.state.lang.two} /></div>
-        <div><Frameworks imgPath={viteLogo} altText={this.state.lang.one} type={this.state.lang.one} /></div>
+        <div>
+          <Frameworks
+            imgPath={reactLogo}
+            altText={this.state.lang.two}
+            type={this.state.type.two}
+          />
+          <Frameworks
+            imgPath={viteLogo}
+            altText={this.state.lang.one}
+            type={this.state.type.one}
+          />
+        </div>
       </>
-    )
+    );
   }
 }
 

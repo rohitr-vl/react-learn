@@ -7,10 +7,10 @@ export const FrameworkLogo = (props) => {
 
 const Frameworks = (props) => {
   return (
-    <div>
-      <p>Best JS {props.type}:</p>
+    <p>
+      <span>Best JS {props.type}:</span>
       <FrameworkLogo imgPath={props.imgPath} altText={props.altText} />
-    </div>
+    </p>
   );
 };
 
