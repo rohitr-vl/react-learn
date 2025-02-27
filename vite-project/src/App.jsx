@@ -3,6 +3,10 @@ import { Component } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import ButtonClickMe from './components/buttons'
+import { Profile, Gallery } from './components/Gallery';  // Importing named exports
+import ButtonGallery, { Gallerys } from './components/GalleryButton'
+import Frameworks from './components/MultipleComponents'
 
 class App extends Component {
   constructor() {
@@ -40,6 +44,16 @@ class App extends Component {
         <p className="read-the-docs">
           Click on the Vite and React logos to learn more
         </p>
+        <ButtonClickMe />
+        <div>
+            <Gallery />
+            <Profile />
+        </div>
+        <div>
+          <p><ButtonGallery /></p>
+          <Gallerys />
+        </div>
+        <div><Frameworks /></div>
       </>
     )
   }
