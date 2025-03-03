@@ -2,10 +2,12 @@
 // import reactLogo from './../assets/react.svg'
 
 export const FrameworkLogo = (props) => {
+  // This is the child component
   return <img src={props.imgPath} alt={props.altText} />;
 };
 
 const Frameworks = (props) => {
+  // this is parent component
   return (
     <p>
       <span>Best JS {props.type}:</span>
