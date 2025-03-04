@@ -4,11 +4,12 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import ButtonClickMe from "./components/buttons";
-import { Profile, Gallery } from "./components/Gallery"; // Importing named exports
+import { ProfilePic, Gallery } from "./components/Gallery"; // Importing named exports
 import ButtonGallery, { Gallerys } from "./components/GalleryButton";
 import Frameworks from "./components/MultipleComponents";
 import Box from "./components/Box";
 import Avatar from "./components/Avatar";
+import { Profile } from "./components/Profile";
 
 class App extends Component {
   constructor() {
@@ -39,8 +40,42 @@ class App extends Component {
       height: "50px",
       margin: "3px",
     };
+    const Profiles = {
+      profile1: {
+        name: "Maria Skłodowska-Curie",
+        imgSrc: "szV5sdG",
+        imgAlt: "Maria Skłodowska-Curie",
+        profession: "physicist and chemist",
+        awardCount: "4",
+        awards:
+          "(Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)",
+        discovery: "polonium (chemical element)",
+      },
+      profile2: {
+        name: "Katsuko Saruhashi",
+        imgSrc: "YfeOqp2",
+        imagAlt: "Katsuko Saruhashi",
+        profession: "geochemist",
+        awardCount: "2",
+        awards: "(Miyake Prize for geochemistry, Tanaka Prize)",
+        discovery: "a method for measuring carbon dioxide in seawater",
+      },
+      profile3: {
+        name: "Ada Lovelace",
+        imgSrc: "",
+        imagAlt: "Ada Lovelace",
+        profession: "mathematician",
+        awardCount: "1",
+        awards: "Shakuntala Devi Prize for Mathematics",
+        discovery: "wrote first computer algorithm",
+      },
+    };
     return (
       <>
+        <div>
+          <h1>Notable Scientists</h1>
+          <Profile profileData={Profiles} />
+        </div>
         <div>
           <Avatar
             style={{ height: "30px", width: "30px", margin: "10px" }}
@@ -83,7 +118,7 @@ class App extends Component {
         <ButtonClickMe />
         <div>
           <Gallery />
-          <Profile />
+          <ProfilePic />
         </div>
         <div>
           <p>
